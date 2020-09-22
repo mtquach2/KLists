@@ -7,7 +7,8 @@ public class KLists{
 	{
 		double [] merged = {};
 		if (outerArray.length > 0){	//checks to see if there are items in the array 
-			for (int j = 0; j < outerArray.length; j++)	//loops through each subarray
+			merged = outerArray[0];
+			for (int j = 1; j < outerArray.length; j++)	//loops through each subarray
 			{
 				double [] arr = new double[merged.length + outerArray[j].length];	//creates a temporary array that stores the values sorted at the current iteration
 				merge(merged, outerArray[j], arr);	//merges the outer array with the subarrays and places them into the temporary array
